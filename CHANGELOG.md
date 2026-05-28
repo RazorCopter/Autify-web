@@ -5,6 +5,13 @@ Il formato è basato su [Keep a Changelog](https://keepachangelog.com/it/1.0.0/)
 
 ---
 
+## [1.0.1] — 2026-05-29
+
+### Risolto
+- 🐛 **Dockerfile**: Rimosso il parametro deprecato `--web-renderer canvaskit` dal comando di build di Flutter, risolvendo l'errore di compilazione con codice di uscita 64 nelle ultime versioni del Flutter SDK.
+
+---
+
 ## [1.0.0] — 2026-05-29
 
 ### 🎉 Release Iniziale
@@ -29,9 +36,6 @@ Il formato è basato su [Keep a Changelog](https://keepachangelog.com/it/1.0.0/)
 - Flutter 3.41.9, Dart 3.11.5
 - Dipendenze: `flutter_animate ^4.5.2`, `google_fonts ^6.2.1`, `url_launcher ^6.3.1`, `visibility_detector ^0.4.0+2`
 - Git remote: `https://github.com/RazorCopter/Autify-web`
-
-#### Risolto
-- 🐛 **Dockerfile**: Rimosso il parametro deprecato `--web-renderer canvaskit` dal comando di build di Flutter, risolvendo l'errore di compilazione con codice di uscita 64 introdotto nelle ultime versioni di Flutter.
 
 ---
 
