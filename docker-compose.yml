@@ -7,11 +7,11 @@ services:
       dockerfile: Dockerfile
     container_name: autify-web
     ports:
-      - "8082:80"
+      - "8085:80"
     restart: unless-stopped
     labels:
       - "com.autify.service=landing-page"
-      - "com.autify.version=1.0.1"
+      - "com.autify.version=1.0.2"
     healthcheck:
       test: [ "CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/" ]
       interval: 30s

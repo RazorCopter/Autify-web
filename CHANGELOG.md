@@ -5,6 +5,13 @@ Il formato è basato su [Keep a Changelog](https://keepachangelog.com/it/1.0.0/)
 
 ---
 
+## [1.0.2] — 2026-05-29
+
+### Risolto
+- 🐛 **Docker Compose**: Cambiata la porta host predefinita da `8082` a `8085` per evitare conflitti con altri servizi locali già attivi sulla porta 8082.
+
+---
+
 ## [1.0.1] — 2026-05-29
 
 ### Risolto
