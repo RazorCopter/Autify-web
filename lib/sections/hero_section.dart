@@ -129,7 +129,38 @@ class HeroSection extends StatelessWidget {
                           delay: 650.ms,
                           curve: Curves.easeOutCubic,
                         ),
-                    SizedBox(height: isMobile ? 80 : 60),
+                    SizedBox(height: isMobile ? 60 : 80),
+                    // Hologram Dashboard Image
+                    Container(
+                      constraints: const BoxConstraints(maxWidth: 800),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(24),
+                        boxShadow: [
+                          BoxShadow(
+                            color: AppColors.primaryBlue.withValues(alpha: 0.2),
+                            blurRadius: 50,
+                            spreadRadius: -10,
+                            offset: const Offset(0, 20),
+                          ),
+                        ],
+                      ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(24),
+                        child: Image.asset(
+                          'assets/images/hologram_dashboard.png',
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    )
+                        .animate()
+                        .fadeIn(duration: 1000.ms, delay: 900.ms)
+                        .slideY(
+                          begin: 0.1,
+                          end: 0,
+                          duration: 1000.ms,
+                          curve: Curves.easeOutQuart,
+                        ),
+                    SizedBox(height: isMobile ? 60 : 80),
                     // Scroll indicator
                     _ScrollIndicator()
                         .animate(onPlay: (c) => c.repeat(reverse: true))

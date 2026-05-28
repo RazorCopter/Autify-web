@@ -11,7 +11,7 @@ services:
     restart: unless-stopped
     labels:
       - "com.autify.service=landing-page"
-      - "com.autify.version=1.0.2"
+      - "com.autify.version=1.0.3"
     healthcheck:
       test: [ "CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/" ]
       interval: 30s

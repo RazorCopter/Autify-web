@@ -5,6 +5,16 @@ Il formato è basato su [Keep a Changelog](https://keepachangelog.com/it/1.0.0/)
 
 ---
 
+## [1.0.3] — 2026-05-29
+
+### 🎨 UI/UX Miglioramento
+- **Integrazione Immagini**: Aggiunte le foto ad alta qualità fornite per migliorare l'impatto visivo della landing page:
+  - `hologram_dashboard.png` inserita come elemento fluttuante nella Hero Section.
+  - `presentation_wide.png` integrata come intestazione panoramica del pannello statistiche nella Value Section.
+  - `tablet_doctor.png` aggiunta sopra ai contatti nella Contact Section per rendere la sezione più accogliente.
+
+---
+
 ## [1.0.2] — 2026-05-29
 
 ### Risolto

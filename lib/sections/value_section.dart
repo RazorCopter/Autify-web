@@ -148,22 +148,48 @@ class ValueSection extends StatelessWidget {
 
   Widget _buildStatsVisual() {
     return Container(
-      padding: const EdgeInsets.all(36),
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [
-            AppColors.primaryBlue.withValues(alpha: 0.03),
-            AppColors.accentTeal.withValues(alpha: 0.05),
-          ],
-        ),
+        color: AppColors.surface,
         borderRadius: BorderRadius.circular(24),
         border: Border.all(
           color: AppColors.border.withValues(alpha: 0.5),
         ),
+        boxShadow: [
+          BoxShadow(
+            color: AppColors.primaryBlue.withValues(alpha: 0.05),
+            blurRadius: 30,
+            offset: const Offset(0, 15),
+          ),
+        ],
       ),
       child: Column(
+        children: [
+          // Presentation Image Header
+          ClipRRect(
+            borderRadius: const BorderRadius.vertical(top: Radius.circular(23)),
+            child: AspectRatio(
+              aspectRatio: 16 / 9,
+              child: Image.asset(
+                'assets/images/presentation_wide.png',
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+          // Stats content
+          Container(
+            padding: const EdgeInsets.all(36),
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [
+                  AppColors.primaryBlue.withValues(alpha: 0.03),
+                  AppColors.accentTeal.withValues(alpha: 0.05),
+                ],
+              ),
+              borderRadius: const BorderRadius.vertical(bottom: Radius.circular(23)),
+            ),
+            child: Column(
         children: [
           _StatItem(
             value: '3',
@@ -185,10 +211,13 @@ class ValueSection extends StatelessWidget {
             icon: Icons.timer_rounded,
             color: AppColors.accentOrange,
           ),
-        ],
-      ),
-    );
-  }
+            ],
+          ),
+        ),
+      ],
+    ),
+  );
+}
 }
 
 class _StatItem extends StatelessWidget {

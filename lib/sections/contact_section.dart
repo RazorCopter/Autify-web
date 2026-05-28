@@ -109,6 +109,17 @@ class ContactSection extends StatelessWidget {
             height: 1.7,
           ),
         ),
+        const SizedBox(height: 32),
+        ClipRRect(
+          borderRadius: BorderRadius.circular(16),
+          child: Image.asset(
+            'assets/images/tablet_doctor.png',
+            height: 240,
+            width: double.infinity,
+            fit: BoxFit.cover,
+            alignment: const Alignment(0, -0.2),
+          ),
+        ),
         const SizedBox(height: 40),
         // Contact info items
         _ContactInfoItem(
