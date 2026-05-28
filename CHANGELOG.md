@@ -5,6 +5,16 @@ Il formato è basato su [Keep a Changelog](https://keepachangelog.com/it/1.0.0/)
 
 ---
 
+## [2.0.0] — 2026-05-29
+
+### 🚀 Major Redesign
+- **Nuovo Layout Split-Screen Hero**: Sostituita la precedente hero text-only con un layout più dinamico a doppia colonna, valorizzato dall'immagine `tablet_doctor.png`.
+- **Showcase Section**: Aggiunta una nuova sezione dedicata alla riprova sociale con contatori animati e l'immagine `presentation_vertical.png` su sfondo scuro per maggior contrasto.
+- **Features & Value Ridisegnate**: Le card features sono state ridotte e impilate a lato del mockup dashboard `hologram_dashboard.png`. La sezione statistiche è ora un layout orizzontale molto più pulito, sovrastato dal banner `presentation_wide.png`.
+- **UI/UX Refinements**: Aggiornato il design system con ombre più profonde, gradienti marcati, e rimozione delle vecchie immagini fuori posto dalla contact section in favore di una nuova *trust bar*.
+
+---
+
 ## [1.0.3] — 2026-05-29
 
 ### 🎨 UI/UX Miglioramento

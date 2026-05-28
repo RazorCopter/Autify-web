@@ -5,7 +5,7 @@ import '../theme/app_theme.dart';
 import '../widgets/animated_section.dart';
 import '../widgets/contact_form.dart';
 
-/// Contact section with dark background and embedded form.
+/// Contact section with dark background, text info on the left, and form on the right.
 class ContactSection extends StatelessWidget {
   const ContactSection({super.key});
 
@@ -37,7 +37,7 @@ class ContactSection extends StatelessWidget {
 
   Widget _buildDesktopLayout(BuildContext context) {
     return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         // Left: Text info
         Expanded(
@@ -64,7 +64,7 @@ class ContactSection extends StatelessWidget {
     return Column(
       children: [
         AnimatedSection(child: _buildInfoColumn()),
-        const SizedBox(height: 48),
+        const SizedBox(height: 64),
         AnimatedSection(
           delay: const Duration(milliseconds: 200),
           child: const ContactForm(),
@@ -86,55 +86,81 @@ class ContactSection extends StatelessWidget {
             borderRadius: BorderRadius.circular(2),
           ),
         ),
-        const SizedBox(height: 20),
+        const SizedBox(height: 24),
         Text(
           'Inizia il tuo\npercorso con Autify',
           style: GoogleFonts.outfit(
-            fontSize: 36,
+            fontSize: 42,
             fontWeight: FontWeight.w700,
             color: AppColors.textOnDark,
-            height: 1.2,
-            letterSpacing: -0.5,
+            height: 1.15,
+            letterSpacing: -1,
           ),
         ),
-        const SizedBox(height: 20),
+        const SizedBox(height: 24),
         Text(
-          'Unisciti alla waitlist o richiedi una demo personalizzata. '
+          'Compila il form per richiedere una demo o ricevere maggiori informazioni. '
           'Il nostro team ti guiderà nella scoperta di come Autify può '
           'trasformare il tuo centro.',
           style: GoogleFonts.inter(
-            fontSize: 17,
+            fontSize: 18,
             fontWeight: FontWeight.w400,
             color: AppColors.textOnDarkMuted,
-            height: 1.7,
+            height: 1.6,
           ),
         ),
-        const SizedBox(height: 32),
-        ClipRRect(
-          borderRadius: BorderRadius.circular(16),
-          child: Image.asset(
-            'assets/images/tablet_doctor.png',
-            height: 240,
-            width: double.infinity,
-            fit: BoxFit.cover,
-            alignment: const Alignment(0, -0.2),
+        const SizedBox(height: 48),
+        // Trust Bar
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+          decoration: BoxDecoration(
+            color: AppColors.surface.withValues(alpha: 0.05),
+            borderRadius: BorderRadius.circular(16),
+            border: Border.all(
+              color: AppColors.surface.withValues(alpha: 0.1),
+            ),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              _TrustFeature(icon: Icons.shield_rounded, text: 'Dati Sicuri & GDPR Compliant'),
+              const SizedBox(height: 12),
+              _TrustFeature(icon: Icons.support_agent_rounded, text: 'Supporto Dedicato'),
+              const SizedBox(height: 12),
+              _TrustFeature(icon: Icons.handshake_rounded, text: 'Partner Affidabile'),
+            ],
           ),
         ),
-        const SizedBox(height: 40),
+        const SizedBox(height: 48),
         // Contact info items
         _ContactInfoItem(
           icon: Icons.email_outlined,
           text: 'info@autify.it',
         ),
-        const SizedBox(height: 16),
-        _ContactInfoItem(
-          icon: Icons.language_rounded,
-          text: 'www.autify.it',
-        ),
-        const SizedBox(height: 16),
-        _ContactInfoItem(
-          icon: Icons.shield_outlined,
-          text: 'GDPR Compliant · Dati sicuri',
+      ],
+    );
+  }
+}
+
+class _TrustFeature extends StatelessWidget {
+  final IconData icon;
+  final String text;
+
+  const _TrustFeature({required this.icon, required this.text});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Icon(icon, size: 20, color: AppColors.accentTeal),
+        const SizedBox(width: 12),
+        Text(
+          text,
+          style: GoogleFonts.inter(
+            fontSize: 15,
+            fontWeight: FontWeight.w500,
+            color: AppColors.textOnDark,
+          ),
         ),
       ],
     );
@@ -152,20 +178,20 @@ class _ContactInfoItem extends StatelessWidget {
     return Row(
       children: [
         Container(
-          padding: const EdgeInsets.all(10),
+          padding: const EdgeInsets.all(12),
           decoration: BoxDecoration(
             color: AppColors.primaryBlue.withValues(alpha: 0.15),
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(12),
           ),
-          child: Icon(icon, size: 18, color: AppColors.accentTeal),
+          child: Icon(icon, size: 20, color: AppColors.accentTeal),
         ),
         const SizedBox(width: 16),
         Text(
           text,
           style: GoogleFonts.inter(
-            fontSize: 15,
+            fontSize: 16,
             color: AppColors.textOnDarkMuted,
-            fontWeight: FontWeight.w400,
+            fontWeight: FontWeight.w500,
           ),
         ),
       ],

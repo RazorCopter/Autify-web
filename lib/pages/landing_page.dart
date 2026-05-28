@@ -6,6 +6,7 @@ import '../sections/hero_section.dart';
 import '../sections/features_section.dart';
 import '../sections/value_section.dart';
 import '../sections/contact_section.dart';
+import '../sections/showcase_section.dart';
 
 /// Main landing page — assembles all sections with smooth scroll navigation.
 class LandingPage extends StatefulWidget {
@@ -77,6 +78,9 @@ class _LandingPageState extends State<LandingPage> {
                   key: _featuresKey,
                   child: const FeaturesSection(),
                 ),
+
+                // Showcase
+                const ShowcaseSection(),
 
                 // Value
                 Container(

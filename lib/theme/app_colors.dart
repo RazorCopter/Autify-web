@@ -32,9 +32,15 @@ class AppColors {
 
   // ─── Gradients ─────────────────────────────────
   static const LinearGradient heroGradient = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [Color(0xFFFFFFFF), Color(0xFFE8F4FD), Color(0xFFF0F7FF)],
+  );
+
+  static const LinearGradient featuresBgGradient = LinearGradient(
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
-    colors: [Color(0xFFFFFFFF), Color(0xFFEBF4FF), Color(0xFFF7FAFC)],
+    colors: [Color(0xFFF7FAFC), Color(0xFFEDF6F5), Color(0xFFF7FAFC)],
   );
 
   static const LinearGradient primaryGradient = LinearGradient(
@@ -55,6 +61,12 @@ class AppColors {
     colors: [Color(0xFF1A2B50), Color(0xFF2D3748)],
   );
 
+  static const LinearGradient showcaseGradient = LinearGradient(
+    begin: Alignment.centerLeft,
+    end: Alignment.centerRight,
+    colors: [Color(0xFF1A2B50), Color(0xFF2B4A78)],
+  );
+
   // ─── Shadows ───────────────────────────────────
   static List<BoxShadow> get softShadow => [
     BoxShadow(
@@ -67,19 +79,28 @@ class AppColors {
 
   static List<BoxShadow> get mediumShadow => [
     BoxShadow(
-      color: primaryNavy.withValues(alpha: 0.08),
-      blurRadius: 32,
-      offset: const Offset(0, 12),
+      color: primaryNavy.withValues(alpha: 0.1),
+      blurRadius: 40,
+      offset: const Offset(0, 16),
       spreadRadius: -4,
     ),
   ];
 
   static List<BoxShadow> get hoverShadow => [
     BoxShadow(
-      color: primaryBlue.withValues(alpha: 0.15),
-      blurRadius: 40,
-      offset: const Offset(0, 16),
+      color: primaryBlue.withValues(alpha: 0.18),
+      blurRadius: 48,
+      offset: const Offset(0, 20),
       spreadRadius: -4,
+    ),
+  ];
+
+  static List<BoxShadow> get imageShadow => [
+    BoxShadow(
+      color: primaryNavy.withValues(alpha: 0.15),
+      blurRadius: 60,
+      offset: const Offset(0, 24),
+      spreadRadius: -12,
     ),
   ];
 }
