@@ -10,8 +10,8 @@ RUN flutter pub get
 # Copy source code and assets
 COPY . .
 
-# Build web release with CanvasKit renderer
-RUN flutter build web --release --web-renderer canvaskit
+# Build web release
+RUN flutter build web --release
 
 # Stage 2: Serve with nginx
 FROM nginx:alpine
