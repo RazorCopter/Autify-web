@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  autify-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: autify-web
+    ports:
+      - "8082:80"
+    restart: unless-stopped
+    labels:
+      - "com.autify.service=landing-page"
+      - "com.autify.version=1.0.0"
+    healthcheck:
+      test: [ "CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/" ]
+      interval: 30s
+      timeout: 3s
+      start_period: 10s
+      retries: 3
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

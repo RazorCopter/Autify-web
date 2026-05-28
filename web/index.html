@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>Autify — L'intelligenza dei dati al servizio della cura</title>
+  <meta name="description" content="Autify è la piattaforma avanzata di analisi dati per centri clinici e di riabilitazione specializzati in autismo e disabilità. Monitoraggio qualità della vita, scale di valutazione POS, San Martín, SIS e report AI.">
+  <meta name="keywords" content="autismo, disabilità, analisi dati, riabilitazione, qualità della vita, POS, San Martín, SIS, intelligenza artificiale, centri clinici">
+  <meta name="author" content="Autify.it">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Autify — Analisi Dati per Autismo">
+  <meta property="og:description" content="Piattaforma avanzata per il monitoraggio della qualità della vita nei centri di riabilitazione.">
+  <meta property="og:url" content="https://autify.it">
+  <meta property="og:site_name" content="Autify">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Autify">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#2B6CB0">
+
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Preconnect Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <style>
+    /* Loading indicator while Flutter initializes */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #F7FAFC;
+      overflow: hidden;
+    }
+    .loading-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    .loading-spinner {
+      width: 36px;
+      height: 36px;
+      border: 3px solid #EDF2F7;
+      border-top-color: #2B6CB0;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div id="loading" class="loading-container">
+    <div class="loading-spinner"></div>
+  </div>
+
+  <script>
+    // Remove loading indicator when Flutter is ready
+    window.addEventListener('flutter-first-frame', function() {
+      const loader = document.getElementById('loading');
+      if (loader) loader.remove();
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
