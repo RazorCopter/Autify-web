@@ -5,6 +5,16 @@ Il formato è basato su [Keep a Changelog](https://keepachangelog.com/it/1.0.0/)
 
 ---
 
+## [2.1.0] — 2026-05-29
+
+### 📸 Premium Light Visual Optimization
+- **Sostituzione Asset Fotografici**: Rimosse le immagini provvisorie e disomogenee (come mockup scuri/olografici o foto con luci discordanti).
+- **Nuova Hero Image (`hero_doctor.png`)**: Immagine luminosa e iper-coerente per la sezione principale.
+- **Nuovo Mockup Dashboard (`ui_dashboard.png`)**: Un'interfaccia clinica moderna e flat, perfettamente allineata al tema chiaro, che sostituisce il vecchio ologramma scuro.
+- **Showcase Unificato (`presentation_clean.png`)**: Utilizzo di uno scatto fotografico pulito e luminoso per le sezioni Showcase e Value.
+
+---
+
 ## [2.0.0] — 2026-05-29
 
 ### 🚀 Major Redesign

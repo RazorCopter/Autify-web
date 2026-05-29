@@ -96,7 +96,7 @@ class FeaturesSection extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: Image.asset(
-                  'assets/images/hologram_dashboard.png',
+                  'assets/images/ui_dashboard.png',
                   fit: BoxFit.cover,
                   filterQuality: FilterQuality.high,
                 ),
@@ -138,7 +138,7 @@ class FeaturesSection extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
               child: Image.asset(
-                'assets/images/hologram_dashboard.png',
+                'assets/images/ui_dashboard.png',
                 fit: BoxFit.cover,
                 filterQuality: FilterQuality.high,
               ),

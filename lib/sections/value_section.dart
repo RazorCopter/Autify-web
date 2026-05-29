@@ -75,7 +75,7 @@ class ValueSection extends StatelessWidget {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(24),
                       child: Image.asset(
-                        'assets/images/presentation_wide.png',
+                        'assets/images/presentation_clean.png',
                         fit: BoxFit.cover,
                         filterQuality: FilterQuality.high,
                       ),

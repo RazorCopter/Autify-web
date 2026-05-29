@@ -50,7 +50,7 @@ class ShowcaseSection extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: Image.asset(
-                  'assets/images/presentation_vertical.png',
+                  'assets/images/presentation_clean.png',
                   fit: BoxFit.cover,
                   filterQuality: FilterQuality.high,
                 ),
@@ -166,7 +166,7 @@ class ShowcaseSection extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
               child: Image.asset(
-                'assets/images/presentation_vertical.png',
+                'assets/images/presentation_clean.png',
                 fit: BoxFit.cover,
                 filterQuality: FilterQuality.high,
               ),
