@@ -106,7 +106,7 @@ class HeroSection extends StatelessWidget {
               ),
               const SizedBox(width: 8),
               Text(
-                'Piattaforma per Centri Clinici',
+                'Piattaforma per la Disabilità',
                 style: GoogleFonts.inter(
                   fontSize: 13,
                   fontWeight: FontWeight.w600,
@@ -123,7 +123,7 @@ class HeroSection extends StatelessWidget {
         const SizedBox(height: 28),
         // Main headline
         Text(
-          "L'intelligenza dei dati\nal servizio della cura.",
+          "L'intelligenza dei dati\nal servizio dell'assistenza.",
           textAlign: isMobile ? TextAlign.center : TextAlign.left,
           style: GoogleFonts.outfit(
             fontSize: isMobile ? 36 : 54,

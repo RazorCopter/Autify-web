@@ -35,7 +35,7 @@ class FeaturesSection extends StatelessWidget {
       icon: Icons.speed_rounded,
       title: 'Efficienza Operativa',
       description:
-          'Automazione dei flussi documentali per dedicare più tempo alla cura.',
+          'Automazione dei flussi documentali per dedicare più tempo agli utenti.',
       color: AppColors.accentGreen,
     ),
   ];
