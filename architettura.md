@@ -14,7 +14,7 @@
 | **Stile** | Premium Light, minimalista |
 | **Repo** | [github.com/RazorCopter/Autify-web](https://github.com/RazorCopter/Autify-web) |
 | **Deploy** | Docker (nginx) su Portainer |
-| **Dominio** | tiglio.autify.it |
+| **Dominio** | autify.it |
 
 ---
 
