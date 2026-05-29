@@ -56,7 +56,7 @@ class Footer extends StatelessWidget {
             ),
             const SizedBox(height: 12),
             Text(
-              '© $year Autify.it — Tutti i diritti riservati',
+              '© $year tiglio.autify.it — Tutti i diritti riservati',
               style: GoogleFonts.inter(
                 fontSize: 13,
                 color: AppColors.textOnDarkMuted,
@@ -96,7 +96,7 @@ class Footer extends StatelessWidget {
         ),
         const SizedBox(height: 20),
         Text(
-          '© $year Autify.it — Tutti i diritti riservati',
+          '© $year tiglio.autify.it — Tutti i diritti riservati',
           style: GoogleFonts.inter(
             fontSize: 13,
             color: AppColors.textOnDarkMuted,
